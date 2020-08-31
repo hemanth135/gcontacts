@@ -16,17 +16,16 @@ class CardList extends React.Component {
           Authorization: `Bearer ${this.token}`,
         },
       });
+      const data = info.data;
+      console.log(data);
+
+      let newInfo = this.state.contactInfo.filter(
+        (member) => member.id.$t !== data.entry.id.$t
+      );
+      this.setState({ contactInfo: newInfo });
     } catch (err) {
       console.log(err);
     }
-    const data = info.data;
-    console.log(data);
-
-    let newInfo = this.state.contactInfo.filter(
-      (member) => member.id.$t !== data.entry.id.$t
-    );
-
-    this.setState({ contactInfo: newInfo });
   };
   render() {
     let res = this.state.contactInfo.map((member) => {
