@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Login from "./Login";
+// import { BrowserRouter, Switch, Route } from "react-router-dom";
+import CardList from "./CardList";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    isLogin: false,
+    contacts: null,
+    token: null,
+  };
+  handleLogin = (isLogin, contacts, token) => {
+    this.setState({ isLogin: true, contacts: contacts, token: token });
+  };
+  render() {
+    // return <Login onSubmit={this.handleLogin} />;
+    return this.state.isLogin ? (
+      <CardList info={this.state.contacts} token={this.state.token} />
+    ) : (
+      <Login onSubmit={this.handleLogin} />
+    );
+  }
 }
 
 export default App;
