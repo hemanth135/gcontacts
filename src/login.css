@@ -1,0 +1,28 @@
+.position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login-button {
+  width: 401px;
+  height: 60px;
+  /* left: 450px;
+  top: 445px; */
+
+  background: #0a45c2;
+  border-radius: 4px;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: white;
+  letter-spacing: 0.08em;
+}
+
+.login-button:hover {
+  cursor: pointer;
+  background: #4275e2;
+}

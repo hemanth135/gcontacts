@@ -1,0 +1,46 @@
+.contact-word {
+  /* width: 136px; */
+  height: 39px;
+  left: 189px;
+  top: 110px;
+  margin: 10px;
+  padding: 0 100px;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 39px;
+  color: blue;
+}
+
+.column-name {
+  width: 800px;
+  height: 60px;
+  margin: 10px auto 0;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.08em;
+}
+
+.column-name-list {
+  left: 100px;
+  width: 250px;
+  padding: 40px;
+  color: #829ad8;
+}
+
+.top {
+  margin-top: 100px;
+}
+
+.fixedHeightContainer {
+  margin: 10px auto 0;
+  padding: 10px;
+  height: 500px;
+  width: 1000px;
+  /* padding: 3px; */
+  overflow-y: scroll;
+}

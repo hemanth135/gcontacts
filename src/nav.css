@@ -1,0 +1,50 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 78px;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+
+  background: linear-gradient(90.21deg, #174dd6 0%, #0f4eac 100%);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.nav-name {
+  width: 150px;
+  height: 27px;
+  left: 130px;
+  top: 16px;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.08em;
+  color: white;
+}
+
+.nav-email {
+  width: 251px;
+  height: 18px;
+  left: 120px;
+  top: 45px;
+
+  color: white;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.08em;
+}
+
+.logout {
+  padding: 25px 50px;
+  margin: 5px;
+}

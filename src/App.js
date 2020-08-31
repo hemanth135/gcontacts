@@ -2,6 +2,7 @@ import React from "react";
 import Login from "./Login";
 // import { BrowserRouter, Switch, Route } from "react-router-dom";
 import CardList from "./CardList";
+import Nav from "./Nav";
 
 class App extends React.Component {
   state = {
@@ -10,12 +11,15 @@ class App extends React.Component {
     token: null,
   };
   handleLogin = (isLogin, contacts, token) => {
-    this.setState({ isLogin: true, contacts: contacts, token: token });
+    this.setState({ isLogin: isLogin, contacts: contacts, token: token });
   };
   render() {
     // return <Login onSubmit={this.handleLogin} />;
     return this.state.isLogin ? (
-      <CardList info={this.state.contacts} token={this.state.token} />
+      <div>
+        <Nav info={this.state.contacts} loginStatus={this.handleLogin} />
+        <CardList info={this.state.contacts} token={this.state.token} />
+      </div>
     ) : (
       <Login onSubmit={this.handleLogin} />
     );

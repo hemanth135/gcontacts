@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import "./login.css";
 // import CardList from "./CardList";
 
 class Login extends React.Component {
@@ -18,7 +19,7 @@ class Login extends React.Component {
         const token = await res.wc.access_token;
         // console.log(token);
         const info = await axios.get(
-          "https://www.google.com/m8/feeds/contacts/default/full?alt=json&max-results=100",
+          "https://www.google.com/m8/feeds/contacts/default/full?alt=json&max-results=300",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -26,7 +27,7 @@ class Login extends React.Component {
           }
         );
         const data = info.data;
-        console.log(data);
+        // console.log(data);
         this.props.onSubmit(true, data, token);
       });
     } catch (err) {
@@ -35,7 +36,14 @@ class Login extends React.Component {
   };
 
   render() {
-    return <button onClick={this.handleClick}>SignIn</button>;
+    return (
+      <div className='position'>
+        <button className='login-button' onClick={this.handleClick}>
+          <i className='google icon large'></i>
+          SignIn with Google
+        </button>
+      </div>
+    );
   }
 }
 

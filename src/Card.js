@@ -12,18 +12,17 @@ class Card extends React.Component {
 
   render() {
     return (
-      <div className='card' onClick={this.handleClick}>
-        <div>{this.props.name}</div>
-        <div>{this.props.email}</div>
-        <div>{this.props.number}</div>
-        <div
-          onClick={(event) => this.props.onClickDelete(this.id)}
-          style={{ display: this.state.display }}
-        >
-          <a>
-            <i className=' trash alternate outline icon'></i>
-          </a>
-        </div>
+      <div className='card-layout' onClick={this.handleClick}>
+        <span className='card1'>{this.props.name}</span>
+        <span className='card2'>{this.props.email}</span>
+        <span className='card3'>{this.props.number}</span>
+        <span>
+          <i
+            onClick={(event) => this.props.onClickDelete(this.id)}
+            style={{ display: this.state.display }}
+            className=' trash alternate outline icon'
+          ></i>
+        </span>
       </div>
     );
   }
