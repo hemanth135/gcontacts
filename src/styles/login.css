@@ -5,8 +5,11 @@
   height: 100vh;
 }
 .login-button {
-  width: 401px;
+  width: 350px;
   height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   /* left: 450px;
   top: 445px; */
 
@@ -25,4 +28,8 @@
 .login-button:hover {
   cursor: pointer;
   background: #4275e2;
+}
+
+.icon-position {
+  padding: 5 px;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
 import axios from "axios";
-import "./cardlist.css";
+import "../styles/cardlist.css";
 
 class CardList extends React.Component {
   state = {

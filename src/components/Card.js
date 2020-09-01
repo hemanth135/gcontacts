@@ -1,5 +1,5 @@
 import React from "react";
-import "./Card.css";
+import "../styles/Card.css";
 class Card extends React.Component {
   id = this.props.id;
   state = { display: "none" };
@@ -13,7 +13,10 @@ class Card extends React.Component {
   render() {
     return (
       <div className='card-layout' onClick={this.handleClick}>
-        <span className='card1'>{this.props.name}</span>
+        <span className='card1'>
+          {" "}
+          <img className='profile'></img> {this.props.name}
+        </span>
         <span className='card2'>{this.props.email}</span>
         <span className='card3'>{this.props.number}</span>
         <span>

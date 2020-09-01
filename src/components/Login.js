@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import "./login.css";
+import "../styles/login.css";
 // import CardList from "./CardList";
 
 class Login extends React.Component {
@@ -39,8 +39,10 @@ class Login extends React.Component {
     return (
       <div className='position'>
         <button className='login-button' onClick={this.handleClick}>
-          <i className='google icon large'></i>
-          SignIn with Google
+          <div className='icon-position'>
+            <i className='google icon large icon-position'></i>
+          </div>
+          <div>SignIn with Google</div>
         </button>
       </div>
     );
